@@ -1,0 +1,11 @@
+/* Em andamento */
+
+@media screen and (max-width: 1154px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    height: 60px;
+  }
+}

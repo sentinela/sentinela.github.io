@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Aprenda @Sentinela</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <link href="https://rawgit.com/AlexKvazos/VanillaToasts/master/vanillatoasts.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="capa-container">
+    <div class="conteudo capa">
+      <h1>
+        Aprenda política de forma
+      </h1>
+      <span class="bradius">descomplicada</span>
+      <button aria-hidden="true" tabindex="-1" id="trocarCapa" class="trocar-capa-temporario bradius">trocar capa 🎨 </button>
+    </div>
+  </header>
+
+  <main class="aulas-container">
+    <div class="conteudo aulas-cabecalho">
+      <h1>Aprenda a partir de cursos <br />ou escolha um tema abaixo</h1>
+
+      <div class="pesquisa-container">
+        <input tabindex="1" onblur="alertar('pesquisa')" name="aprendasentinela" class="pesquisa bradius" type="search" autosave=aprendasentinela results=5 placeholder="Procure por algum conteúdo..." />
+        <button tabindex="-1" class="icon">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="conteudo aulas">
+      <div tabindex="2" class="aula-container bradius" onclick="alertar()">
+        <div class="aula-titulo">
+          <h2>O que faz <br/>uma pessoa vereadora?</h2>
+          <img src="https://image.flaticon.com/icons/svg/281/281354.svg" />
+        </div>
+        <p>Aprenda o que ela deveria fazer, <br/>limite de salário e mais... </p>
+        <p>(9 minutos de leitura)</p>
+        <!-- Curiosidade: Medium faz 275 Palavras/Minuto e 12s a cada img -->
+      </div>
+
+      <div tabindex="3" class="aula-container bradius" onclick="alertar()">
+        <div class="aula-titulo">
+          <h2>Qual é o papel de uma pessoa vereadora?</h2>
+          <img src="https://image.flaticon.com/icons/svg/281/281354.svg" />
+        </div>
+        <p>Aprenda o que ela deveria fazer, <br/>limite de salário e mais... </p>
+        <p>(9 minutos de leitura)</p>
+      </div>
+
+      <div tabindex="4" class="aula-container bradius" onclick="alertar()">
+        <div class="aula-titulo">
+          <h2>Qual é o papel de uma pessoa vereadora?</h2>
+          <img src="https://image.flaticon.com/icons/svg/281/281354.svg" />
+        </div>
+        <p>Aprenda o que ela deveria fazer, <br/>limite de salário e mais... </p>
+        <p>(9 minutos de leitura)</p>
+      </div>
+
+      <div tabindex="5" class="aula-container bradius" onclick="alertar()">
+        <div class="aula-titulo">
+          <h2>Qual é o papel de uma pessoa vereadora?</h2>
+          <img src="https://image.flaticon.com/icons/svg/281/281354.svg" />
+        </div>
+        <p>Aprenda o que ela deveria fazer, <br/>limite de salário e mais... </p>
+        <p>(9 minutos de leitura)</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="conteudo em-breve">
+    <div class="bradius em-breve-container">
+      <div>
+        <p tabindex="6">
+          Olá, este website está sendo desenvolvido, se você for uma <br />pessoa
+          <b> desenvolvedora</b>, <b>jornalista</b>, <b>designer</b> <br />  ou queira ajudar de alguma forma,
+           entre em <br /> contato conosco  e nos ajude no progresso deste projeto!
+        </p>
+        <p tabindex="7" class="em-breve-links">
+          Link<a href="https://github.com/sentinela/Aprenda"> GitHub</a> 💾
+          <br />Contato: sentinelaprojeto@gmail.com 📧
+        </p>
+      </div>
+      <div class="em-breve-alerta">
+        <p>Em <br />Breve.</p>
+      </div>
+      <div>
+        <a tabindex="-1" href="https://github.com/sentinela/Aprenda" rel="noopener noreferrer" target="_blank">
+          <img aria-hidden="true" width="120" src="https://image.flaticon.com/icons/svg/288/288843.svg" alt="Logotipo do projeto Sentinela">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Feito com <span aria-label="amor"><span aria-hidden="true">❤</span></span></span> em <a rel="noreferrer noopener" target="_blank" href="http://www.github.com/sentinela" tabindex="-1">@Sentinela</a></p>
+  </footer>
+
+  <script src="./toastr.js"></script>
+  <script>
+    var alertar;
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var capa = document.querySelector('header');
+      var btn = document.getElementById('trocarCapa');
+      var cl = capa.classList;
+
+      btn.addEventListener('click', function () {
+        if (capa.className === 'capa-container')
+          return capa.className = 'capa-container2';
+
+        if (capa.className === 'capa-container2')
+          return capa.className = 'capa-container3';
+
+        if (cl.contains('capa-container2') || cl.contains('capa-container3'))
+          return capa.className = 'capa-container';
+      });
+
+      alertar = function(funcionalidade) {
+        funcionalidade = funcionalidade || 'aulas';
+        VanillaToasts.create({
+          title: 'Olá,',
+          text: 'Esta funcionalidade de ' + funcionalidade + ' ainda não existe, nos ajude a finalizá-la!',
+          type: 'warning',
+          icon: './logo.png',
+          timeout: 5000,
+        });
+      }
+    });
+  </script>
+</html>
