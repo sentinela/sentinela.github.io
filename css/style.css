@@ -25,6 +25,7 @@ img {
 }
 
 .trocar-capa-temporario {
+  cursor: pointer;
   background: #fe3843;
   padding: 7px;
   border: none;
@@ -34,7 +35,6 @@ img {
   right: 100px;
   top: 40px;
   position: absolute;
-  z-index: 2;
 }
 
 .footer {

@@ -26,9 +26,9 @@
       <h1>Aprenda a partir de cursos <br />ou escolha um tema abaixo</h1>
 
       <div class="pesquisa-container">
-        <input tabindex="1" onblur="alertar('pesquisa')" name="aprendasentinela" class="pesquisa bradius" type="search" autosave=aprendasentinela results=5 placeholder="Procure por algum conteúdo..." />
+        <input aria-hidden="true" tabindex="1" onblur="alertar('pesquisa')" name="aprendasentinela" class="pesquisa bradius" type="search" autosave=aprendasentinela results=5 placeholder="Procure por algum conteúdo..." />
         <button tabindex="-1" class="icon">
-          <i class="fa fa-search"></i>
+          <em aria-hidden="true" class="fa fa-search"></em>
         </button>
       </div>
     </div>
@@ -37,7 +37,7 @@
       <div tabindex="2" class="aula-container bradius" onclick="alertar()">
         <div class="aula-titulo">
           <h2>O que faz <br/>uma pessoa vereadora?</h2>
-          <img src="https://image.flaticon.com/icons/svg/281/281354.svg" />
+          <img alt="Terno e gravata fazendo alusão a uma pessoa vereadora" src="https://image.flaticon.com/icons/svg/281/281354.svg" />
         </div>
         <p>Aprenda o que ela deveria fazer, <br/>limite de salário e mais... </p>
         <p>(9 minutos de leitura)</p>
@@ -47,7 +47,7 @@
       <div tabindex="3" class="aula-container bradius" onclick="alertar()">
         <div class="aula-titulo">
           <h2>Qual é o papel de uma pessoa vereadora?</h2>
-          <img src="https://image.flaticon.com/icons/svg/281/281354.svg" />
+          <img alt="Terno e gravata fazendo alusão a uma pessoa vereadora" src="https://image.flaticon.com/icons/svg/281/281354.svg" />
         </div>
         <p>Aprenda o que ela deveria fazer, <br/>limite de salário e mais... </p>
         <p>(9 minutos de leitura)</p>
@@ -56,7 +56,7 @@
       <div tabindex="4" class="aula-container bradius" onclick="alertar()">
         <div class="aula-titulo">
           <h2>Qual é o papel de uma pessoa vereadora?</h2>
-          <img src="https://image.flaticon.com/icons/svg/281/281354.svg" />
+          <img alt="Terno e gravata fazendo alusão a uma pessoa vereadora" src="https://image.flaticon.com/icons/svg/281/281354.svg" />
         </div>
         <p>Aprenda o que ela deveria fazer, <br/>limite de salário e mais... </p>
         <p>(9 minutos de leitura)</p>
@@ -65,7 +65,7 @@
       <div tabindex="5" class="aula-container bradius" onclick="alertar()">
         <div class="aula-titulo">
           <h2>Qual é o papel de uma pessoa vereadora?</h2>
-          <img src="https://image.flaticon.com/icons/svg/281/281354.svg" />
+          <img alt="Terno e gravata fazendo alusão a uma pessoa vereadora" src="https://image.flaticon.com/icons/svg/281/281354.svg" />
         </div>
         <p>Aprenda o que ela deveria fazer, <br/>limite de salário e mais... </p>
         <p>(9 minutos de leitura)</p>
@@ -78,7 +78,7 @@
       <div>
         <p tabindex="6">
           Olá, este website está sendo desenvolvido, se você for uma <br />pessoa
-          <b> desenvolvedora</b>, <b>jornalista</b>, <b>designer</b> <br />  ou queira ajudar de alguma forma,
+          <strong> desenvolvedora</strong>, <strong>jornalista</strong>, <strong>designer</strong> <br />  ou queira ajudar de alguma forma,
            entre em <br /> contato conosco  e nos ajude no progresso deste projeto!
         </p>
         <p tabindex="7" class="em-breve-links">

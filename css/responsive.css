@@ -1,7 +1,16 @@
 /* Em andamento */
 
 @media screen and (max-width: 1154px) {
-
+  .trocar-capa-temporario, .aula-container, .em-breve-alerta, body > section > div > div:nth-child(3) {
+    display: none;
+  }
+  .aula-container:first-child {
+    display: block;
+  }
+  body > header > div.conteudo > h1 {
+    width: 100%;
+    font-size: 26px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
